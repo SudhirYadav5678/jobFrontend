@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className='bg-white'>
             <div className='flex items-center justify-between mx-auto max-w-7xl h-16'>
                 <div>
-                    <h1 className='text-2xl font-bold'>SKY Jobs<span className='text-[#96f802]'>Portal</span></h1>
+                    <h1 className='text-2xl font-bold'>Job<span className='text-[#F83002]'>Pe</span></h1>
                 </div>
                 <div className='flex items-center gap-12'>
                     <ul className='flex font-medium items-center gap-5'>
@@ -63,7 +63,7 @@ const Navbar = () => {
                             <Popover>
                                 <PopoverTrigger asChild>
                                     <Avatar className="cursor-pointer">
-                                        <AvatarImage src={user?.profile?.profilePhoto} alt="@shadcn" />
+                                        {<AvatarImage src="https://images.pexels.com/photos/18173391/pexels-photo-18173391/free-photo-of-modern-colonnade-along-the-street.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="@shadcn" /> /*{user?.profile?.profilePhoto} */}
                                     </Avatar>
                                 </PopoverTrigger>
                                 <PopoverContent className="w-80">
