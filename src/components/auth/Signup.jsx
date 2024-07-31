@@ -22,7 +22,7 @@ const Signup = () => {
         role: "",
         file: ""
     });
-    const {loading,user} = useSelector(store=>store.auth);
+    const { loading, user } = useSelector(store => store.auth);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -57,16 +57,16 @@ const Signup = () => {
         } catch (error) {
             console.log(error);
             toast.error(error.response.data.message);
-        } finally{
+        } finally {
             dispatch(setLoading(false));
         }
     }
 
-    useEffect(()=>{
-        if(user){
+    useEffect(() => {
+        if (user) {
             navigate("/");
         }
-    },[])
+    }, [])
     return (
         <div>
             <Navbar />
@@ -130,8 +130,8 @@ const Signup = () => {
                                 <Input
                                     type="radio"
                                     name="role"
-                                    value="recruiter"
-                                    checked={input.role === 'recruiter'}
+                                    value="recuriter"
+                                    checked={input.role === 'recuriter'}
                                     onChange={changeEventHandler}
                                     className="cursor-pointer"
                                 />
