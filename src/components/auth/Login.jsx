@@ -18,7 +18,7 @@ const Login = () => {
         password: "",
         role: "",
     });
-    console.log(input);
+    //console.log(input);
     const { loading, user } = useSelector(store => store.auth);
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -49,6 +49,10 @@ const Login = () => {
             dispatch(setLoading(false));
         }
     }
+
+    useEffect(() => {
+        document.title = "JobPe | Login"
+    }, [])
     useEffect(() => {
         if (user) {
             navigate("/");
@@ -98,8 +102,8 @@ const Login = () => {
                                 <Input
                                     type="radio"
                                     name="role"
-                                    value="recruiter"
-                                    checked={input.role === 'recruiter'}
+                                    value="recuriter"
+                                    checked={input.role === 'recuriter'}
                                     onChange={changeEventHandler}
                                     className="cursor-pointer"
                                 />

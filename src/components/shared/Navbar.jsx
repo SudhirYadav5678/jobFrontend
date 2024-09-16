@@ -32,12 +32,12 @@ const Navbar = () => {
         <div className='bg-white'>
             <div className='flex items-center justify-between mx-auto max-w-7xl h-16'>
                 <div>
-                    <h1 className='text-2xl font-bold'>Job<span className='text-[#F83002]'>Pe</span></h1>
+                    <h1 className='text-2xl font-bold'>Job<span className='text-[#9a02f8]'>Pe</span></h1>
                 </div>
                 <div className='flex items-center gap-12'>
                     <ul className='flex font-medium items-center gap-5'>
                         {
-                            user && user.role === 'recruiter' ? (
+                            user && user.role === 'recuriter' ? (
                                 <>
                                     <li><Link to="/admin/companies">Companies</Link></li>
                                     <li><Link to="/admin/jobs">Jobs</Link></li>
@@ -57,13 +57,13 @@ const Navbar = () => {
                         !user ? (
                             <div className='flex items-center gap-2'>
                                 <Link to="/login"><Button variant="outline">Login</Button></Link>
-                                <Link to="/signup"><Button className="bg-[#6A38C2] hover:bg-[#5b30a6]">Signup</Button></Link>
+                                <Link to="/signup"><Button className="bg-[#3854c2] hover:bg-[#5b30a6]">Signup</Button></Link>
                             </div>
                         ) : (
                             <Popover>
                                 <PopoverTrigger asChild>
                                     <Avatar className="cursor-pointer">
-                                        {<AvatarImage src="https://images.pexels.com/photos/18173391/pexels-photo-18173391/free-photo-of-modern-colonnade-along-the-street.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="@shadcn" /> /*{user?.profile?.profilePhoto} */}
+                                        {<AvatarImage src={user?.profile?.profilePhoto} alt="@shadcn" />}
                                     </Avatar>
                                 </PopoverTrigger>
                                 <PopoverContent className="w-80">

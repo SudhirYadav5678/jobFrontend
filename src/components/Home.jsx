@@ -13,7 +13,10 @@ const Home = () => {
   const { user } = useSelector(store => store.auth);
   const navigate = useNavigate();
   useEffect(() => {
-    if (user?.role === 'recruiter') {
+    document.title = "JobPe | Home"
+  }, [])
+  useEffect(() => {
+    if (user?.role === 'recuriter') {
       navigate("/admin/companies");
     }
   }, []);

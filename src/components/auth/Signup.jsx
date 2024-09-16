@@ -43,6 +43,7 @@ const Signup = () => {
         if (input.file) {
             formData.append("file", input.file);
         }
+        //console.log(formData);
 
         try {
             dispatch(setLoading(true));
@@ -63,6 +64,10 @@ const Signup = () => {
     }
 
     useEffect(() => {
+        document.title = "JobPe | SignUp"
+    }, [])
+
+    useEffect(() => {
         if (user) {
             navigate("/");
         }
@@ -80,7 +85,7 @@ const Signup = () => {
                             value={input.fullname}
                             name="fullname"
                             onChange={changeEventHandler}
-                            placeholder="patel"
+                            placeholder="Sudhir Yadav"
                         />
                     </div>
                     <div className='my-2'>
@@ -90,7 +95,7 @@ const Signup = () => {
                             value={input.email}
                             name="email"
                             onChange={changeEventHandler}
-                            placeholder="patel@gmail.com"
+                            placeholder="abc@gmail.com"
                         />
                     </div>
                     <div className='my-2'>
@@ -100,7 +105,7 @@ const Signup = () => {
                             value={input.phoneNumber}
                             name="phoneNumber"
                             onChange={changeEventHandler}
-                            placeholder="8080808080"
+                            placeholder="8080xxxx80"
                         />
                     </div>
                     <div className='my-2'>
@@ -110,7 +115,7 @@ const Signup = () => {
                             value={input.password}
                             name="password"
                             onChange={changeEventHandler}
-                            placeholder="patel@gmail.com"
+                            placeholder="Your Password"
                         />
                     </div>
                     <div className='flex items-center justify-between'>

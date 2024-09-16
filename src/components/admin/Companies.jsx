@@ -14,9 +14,13 @@ const Companies = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    useEffect(()=>{
+    useEffect(() => {
+        document.title = "JobPe | Companaies"
+    }, [])
+
+    useEffect(() => {
         dispatch(setSearchCompanyByText(input));
-    },[input]);
+    }, [input]);
     return (
         <div>
             <Navbar />
@@ -29,7 +33,7 @@ const Companies = () => {
                     />
                     <Button onClick={() => navigate("/admin/companies/create")}>New Company</Button>
                 </div>
-                <CompaniesTable/>
+                <CompaniesTable />
             </div>
         </div>
     )

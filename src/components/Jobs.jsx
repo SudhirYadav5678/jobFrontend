@@ -23,7 +23,9 @@ const Jobs = () => {
             setFilterJobs(allJobs)
         }
     }, [allJobs, searchedQuery]);
-
+    useEffect(() => {
+        document.title = 'JobPe | Job'
+    })
     return (
         <div>
             <Navbar />
